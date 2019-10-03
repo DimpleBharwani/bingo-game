@@ -118,7 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/index.js":[function(require,module,exports) {
-var range = _.range(1, 91); // var dom = {
+var range = _.range(1, 91); //crea un rango del 1 al 90
+// var dom = {
 //   button: ,
 //   bombo: ,
 // }
@@ -130,15 +131,18 @@ var range = _.range(1, 91); // var dom = {
 var button = document.querySelector("#button");
 var bombo = document.querySelector("#numbombo");
 var test = document.querySelector("#test");
-var cartones = document.querySelectorAll(".carton"); // console.log(test);
+var cartones = document.querySelectorAll(".carton");
+var findBola = document.querySelectorAll(".num" + newNumber); // console.log(test);
 // test.textContent = "hola";
+//numero para el bombo
 
 var newNumber = function newNumber() {
   var shuffle = _.shuffle(range);
 
   var popped = shuffle.pop();
   bombo.textContent = popped;
-};
+}; //al hacer click saca el numero
+
 
 button.addEventListener("click", newNumber);
 
@@ -154,6 +158,7 @@ var createCard = function createCard() {
 //   var numBombo = newNumber();
 //   if numBombo = 
 // }
+//
 
 
 var showCard = function showCard(carton) {
@@ -170,6 +175,12 @@ var showCard = function showCard(carton) {
 cartones.forEach(function (carton) {
   showCard(carton);
 });
+
+for (var i = 0; i < findBola.length; i++) {
+  findBola[i].classList.add("tachado");
+
+  _.pull(carton, newNumber);
+}
 },{}],"../../../../../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -198,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65509" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49331" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

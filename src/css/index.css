@@ -17,7 +17,7 @@
    h1 {
     text-align: center;
    }
-   carton.tachado {
+  .num.tachado {
     color: red;
     text-decoration: line-through;
    }
